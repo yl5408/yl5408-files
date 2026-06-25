@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="YL5408 下载中心，用于发布软件、工具和公开下载文件。"
+    />
+    <title>下载中心 - YL5408</title>
+    <link rel="preload" href="./assets/hero-archive.png" as="image" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">Y</span>
+        <span class="brand-text">YL5408 下载中心</span>
+      </a>
+      <nav class="nav" aria-label="主要导航">
+        <a href="https://yl5408.cn">总站</a>
+        <a href="#downloads">文件</a>
+        <a href="#updates">更新</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="./assets/hero-archive.png"
+          alt="整齐排列的软件包、文件夹和下载模块"
+        />
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Files Hub</p>
+          <h1 id="hero-title">下载中心</h1>
+          <p class="hero-copy">
+            存放 YL5408 公开发布的软件、工具和文件。先轻量上线，以后文件变多再接入对象存储。
+          </p>
+          <div class="hero-actions" aria-label="页面入口">
+            <a class="button button-primary" href="#downloads">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4" />
+                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+              </svg>
+              <span>查看文件</span>
+            </a>
+            <a class="button button-secondary" href="#updates">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12a9 9 0 1 1-2.6-6.4" />
+                <path d="M21 4v6h-6" />
+              </svg>
+              <span>最近更新</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="summary-band" aria-label="站点摘要">
+        <div class="summary-grid">
+          <div>
+            <span class="summary-value" id="total-count">0</span>
+            <span class="summary-label">公开文件</span>
+          </div>
+          <div>
+            <span class="summary-value" id="latest-version">--</span>
+            <span class="summary-label">最新版本</span>
+          </div>
+          <div>
+            <span class="summary-value" id="latest-date">--</span>
+            <span class="summary-label">最近日期</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="downloads-section" id="downloads" aria-labelledby="downloads-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Downloads</p>
+            <h2 id="downloads-title">文件下载</h2>
+          </div>
+
+          <div class="toolbar" role="search">
+            <label class="search-field">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+              <span class="sr-only">搜索文件</span>
+              <input id="search-input" type="search" placeholder="搜索名称、系统、说明" />
+            </label>
+            <div class="category-tabs" id="category-tabs" aria-label="文件分类"></div>
+          </div>
+
+          <div class="downloads-grid" id="downloads-grid" aria-live="polite"></div>
+          <p class="empty-state" id="empty-state" hidden>没有找到匹配的文件。</p>
+        </div>
+      </section>
+
+      <section class="updates-section" id="updates" aria-labelledby="updates-title">
+        <div class="section-inner two-column">
+          <div class="section-heading">
+            <p class="eyebrow">Log</p>
+            <h2 id="updates-title">最近更新</h2>
+          </div>
+          <div class="timeline" id="timeline"></div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="section-inner about-layout">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2 id="about-title">关于这个站点</h2>
+          </div>
+          <div class="about-copy">
+            <p>
+              这里是 YL5408 的下载子站，先作为公开下载目录使用。网站托管在 Cloudflare Pages，文件可以先放在 GitHub Releases。
+            </p>
+            <p>
+              后续文件数量增加时，可以把大文件迁到 Cloudflare R2，网站入口和域名保持不变。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> YL5408 下载中心</span>
+      <a href="mailto:hello@example.com">hello@example.com</a>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
