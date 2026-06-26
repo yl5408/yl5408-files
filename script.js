@@ -1,44 +1,4 @@
-const fallbackFiles = [
-  {
-    id: "example-windows-tool",
-    name: "示例 Windows 工具",
-    version: "v1.0.0",
-    category: "软件",
-    platform: "Windows",
-    size: "18.6 MB",
-    updated: "2026-06-24",
-    description: "这里替换成你的软件说明。适合放安装包、绿色版或压缩包。",
-    url: "",
-    checksum: "SHA256: 待填写",
-    status: "draft"
-  },
-  {
-    id: "example-portable-kit",
-    name: "便携工具包",
-    version: "v0.3.0",
-    category: "工具",
-    platform: "Windows / Linux",
-    size: "42.1 MB",
-    updated: "2026-06-20",
-    description: "可以把常用脚本、模板或命令行工具整理到这个分类。",
-    url: "",
-    checksum: "SHA256: 待填写",
-    status: "draft"
-  },
-  {
-    id: "example-archive",
-    name: "公开资料归档",
-    version: "2026.06",
-    category: "资料",
-    platform: "通用",
-    size: "9.4 MB",
-    updated: "2026-06-12",
-    description: "适合放说明文档、离线资料、素材压缩包等公开文件。",
-    url: "",
-    checksum: "SHA256: 待填写",
-    status: "draft"
-  }
-];
+const fallbackFiles = [];
 
 const state = {
   files: [],
