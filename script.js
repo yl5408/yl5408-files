@@ -97,9 +97,14 @@ function renderFiles() {
       const checksum = file.checksum || "SHA256: --";
       const statusClass = file.status === "draft" ? "draft" : "";
       const statusText = file.status === "draft" ? "待上传" : "可下载";
+      const downloadUrl = ready ? escapeHtml(file.url) : "#";
+      const cardAttrs = ready ? `data-download-url="${downloadUrl}" tabindex="0" role="link" aria-label="下载 ${escapeHtml(file.name)}"` : "";
+      const title = ready
+        ? `<a class="file-title-link" href="${downloadUrl}" target="_blank" rel="noopener">${escapeHtml(file.name)}</a>`
+        : escapeHtml(file.name);
 
       return `
-        <article class="file-card">
+        <article class="file-card ${ready ? "is-clickable" : ""}" ${cardAttrs}>
           <div class="file-top">
             <span class="file-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24">
@@ -112,7 +117,7 @@ function renderFiles() {
             <span class="status-pill ${statusClass}">${statusText}</span>
           </div>
           <div class="file-body">
-            <h3>${escapeHtml(file.name)}</h3>
+            <h3>${title}</h3>
             <p class="file-description">${escapeHtml(file.description)}</p>
             <div class="meta-row" aria-label="文件信息">
               <span>${escapeHtml(file.version)}</span>
@@ -123,7 +128,7 @@ function renderFiles() {
           </div>
           <div class="file-actions">
             <span class="hash" title="${escapeHtml(checksum)}">${escapeHtml(shortChecksum(checksum))}</span>
-            <a class="download-link ${ready ? "" : "is-disabled"}" href="${ready ? escapeHtml(file.url) : "#"}" ${ready ? "target=\"_blank\" rel=\"noopener\"" : "aria-disabled=\"true\""}>
+            <a class="download-link ${ready ? "" : "is-disabled"}" href="${downloadUrl}" ${ready ? "target=\"_blank\" rel=\"noopener\"" : "aria-disabled=\"true\""}>
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 3v12m0 0 4-4m-4 4-4-4" />
                 <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
@@ -166,6 +171,22 @@ function renderTimeline() {
 }
 
 function bindEvents() {
+  els.grid.addEventListener("click", (event) => {
+    if (event.target.closest("a, button")) return;
+    const card = event.target.closest("[data-download-url]");
+    if (!card) return;
+    window.open(card.dataset.downloadUrl, "_blank", "noopener");
+  });
+
+  els.grid.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    if (event.target.closest("a, button")) return;
+    const card = event.target.closest("[data-download-url]");
+    if (!card) return;
+    event.preventDefault();
+    window.open(card.dataset.downloadUrl, "_blank", "noopener");
+  });
+
   els.tabs.addEventListener("click", (event) => {
     const button = event.target.closest("[data-category]");
     if (!button) return;
