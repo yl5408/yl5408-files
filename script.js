@@ -76,6 +76,15 @@ function isReadyUrl(url) {
   return Boolean(url && /^https?:\/\//i.test(url));
 }
 
+function shortChecksum(value) {
+  const text = String(value || "SHA256: --");
+  const match = text.match(/^(SHA256:\s*)([a-f0-9]{64})$/i);
+  if (match) {
+    return `${match[1]}${match[2].slice(0, 8)}...${match[2].slice(-8)}`;
+  }
+  return text.length > 38 ? `${text.slice(0, 26)}...${text.slice(-8)}` : text;
+}
+
 async function loadFiles() {
   try {
     const response = await fetch("./files.json", { cache: "no-store" });
@@ -125,6 +134,7 @@ function renderFiles() {
   els.grid.innerHTML = files
     .map((file) => {
       const ready = isReadyUrl(file.url);
+      const checksum = file.checksum || "SHA256: --";
       const statusClass = file.status === "draft" ? "draft" : "";
       const statusText = file.status === "draft" ? "待上传" : "可下载";
 
@@ -152,7 +162,7 @@ function renderFiles() {
             </div>
           </div>
           <div class="file-actions">
-            <span class="hash" title="${escapeHtml(file.checksum || "")}">${escapeHtml(file.checksum || "SHA256: --")}</span>
+            <span class="hash" title="${escapeHtml(checksum)}">${escapeHtml(shortChecksum(checksum))}</span>
             <a class="download-link ${ready ? "" : "is-disabled"}" href="${ready ? escapeHtml(file.url) : "#"}" ${ready ? "target=\"_blank\" rel=\"noopener\"" : "aria-disabled=\"true\""}>
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 3v12m0 0 4-4m-4 4-4-4" />

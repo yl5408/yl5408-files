@@ -377,6 +377,7 @@ input {
   gap: 18px;
   min-height: 302px;
   padding: 20px;
+  overflow: hidden;
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -462,16 +463,19 @@ input {
 }
 
 .file-actions {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
   padding-top: 16px;
   border-top: 1px solid var(--line);
+  min-width: 0;
 }
 
 .hash {
+  display: block;
   min-width: 0;
+  max-width: 100%;
   color: var(--muted);
   font-family: "Cascadia Mono", Consolas, monospace;
   font-size: 12px;
@@ -492,6 +496,7 @@ input {
   background: var(--ink);
   font-size: 14px;
   font-weight: 780;
+  white-space: nowrap;
 }
 
 .download-link svg {
@@ -666,6 +671,10 @@ input {
   .site-footer {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .file-actions {
+    grid-template-columns: 1fr;
   }
 
   .download-link {
