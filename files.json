@@ -1,19 +1,6 @@
 {
   "files": [
     {
-      "id": "后台部署测试-v1-0-0",
-      "name": "后台部署测试",
-      "version": "v1.0.0",
-      "category": "测试",
-      "platform": "Windows",
-      "size": "108 B",
-      "updated": "2026-06-28",
-      "description": "用于验证后台上传与删除，Hook 已启用。",
-      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/yl5408-admin-e2e-test.txt",
-      "checksum": "SHA256: e9df95189a64182585721d91098fc05927a7db639664eb2ce1ac4ea98bc96b24",
-      "status": "ready"
-    },
-    {
       "id": "加密1-v1-0-0",
       "name": "加密1",
       "version": "v1.0.0",
