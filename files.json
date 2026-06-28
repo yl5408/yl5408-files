@@ -1,30 +1,30 @@
 {
-    "files":  [
-                  {
-                      "id":  "加密1-v1-0-0",
-                      "name":  "加密1",
-                      "version":  "v1.0.0",
-                      "category":  "软件",
-                      "platform":  "Windows",
-                      "size":  "213.6 KB",
-                      "updated":  "2026-06-27",
-                      "description":  "暂无说明。",
-                      "url":  "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/1-20260627-114108.zip",
-                      "checksum":  "SHA256: ee67e4e21af7647c78513a2e43496b6da74745cae97cff52639c494fcdef02e2",
-                      "status":  "ready"
-                  },
-                  {
-                      "id":  "artstation-folder-updater-v1-0-0",
-                      "name":  "artstation-folder-updater",
-                      "version":  "v1.0.0",
-                      "category":  "Software",
-                      "platform":  "Windows",
-                      "size":  "15.8 KB",
-                      "updated":  "2026-06-26",
-                      "description":  "No description yet.",
-                      "url":  "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/artstation-folder-updater.zip",
-                      "checksum":  "SHA256: 9daec32c941a9f72e8eb9a55f82d7c4dce97a13a3c655055d8f0342a2bcdf73c",
-                      "status":  "ready"
-                  }
-              ]
+  "files": [
+    {
+      "id": "加密1-v1-0-0",
+      "name": "加密1",
+      "version": "v1.0.0",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "213.6 KB",
+      "updated": "2026-06-27",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/1-20260627-114108.zip",
+      "checksum": "SHA256: ee67e4e21af7647c78513a2e43496b6da74745cae97cff52639c494fcdef02e2",
+      "status": "ready"
+    },
+    {
+      "id": "artstation-folder-updater-v1-0-0",
+      "name": "ArtStation 文件夹更新工具",
+      "version": "v1.0.0",
+      "category": "Software",
+      "platform": "Windows",
+      "size": "15.8 KB",
+      "updated": "2026-06-28",
+      "description": "No description yet.",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/artstation-folder-updater.zip",
+      "checksum": "SHA256: 9daec32c941a9f72e8eb9a55f82d7c4dce97a13a3c655055d8f0342a2bcdf73c",
+      "status": "ready"
+    }
+  ]
 }
