@@ -1,6 +1,19 @@
 {
   "files": [
     {
+      "id": "ai时代有张力的卡通角色设计完整教程-v1-0-0",
+      "name": "AI时代有张力的卡通角色设计完整教程",
+      "version": "v1.0.0",
+      "category": "文档",
+      "platform": "Windows",
+      "size": "25.1 KB",
+      "updated": "2026-06-29",
+      "description": "ai迪士尼风格",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/AI.docx",
+      "checksum": "SHA256: 240b851a78bda6c6931dd05d2b0da625d6650fdd15f5fb7ee2ed45f3a51c2fd1",
+      "status": "ready"
+    },
+    {
       "id": "加密1-v1-0-0",
       "name": "加密1",
       "version": "v1.0.0",
