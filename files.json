@@ -1,6 +1,19 @@
 {
   "files": [
     {
+      "id": "ps-png导出脚本-v1-0-0",
+      "name": "ps png导出脚本",
+      "version": "v1.0.0",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "10.4 KB",
+      "updated": "2026-07-07",
+      "description": "ps png导出脚本",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/export_visible_layers_png_fast_progress.jsx",
+      "checksum": "SHA256: 93ddff54209fb7f1eefa8a9d41f8f71036e50653190795f7cc3c230229874d40",
+      "status": "ready"
+    },
+    {
       "id": "ai时代有张力的卡通角色设计完整教程-v1-0-0",
       "name": "AI时代有张力的卡通角色设计完整教程",
       "version": "v1.0.0",
