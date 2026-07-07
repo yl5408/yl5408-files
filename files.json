@@ -1,6 +1,19 @@
 {
   "files": [
     {
+      "id": "png批量导入-v1-0-0",
+      "name": "png批量导入",
+      "version": "v1.0.0",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "8.1 KB",
+      "updated": "2026-07-07",
+      "description": "png批量导入",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/import_pngs_to_layers.jsx",
+      "checksum": "SHA256: 2d8b303e1661111cf38b99c6c1d2dae2fb5686c5f6b83b841cef55c30b62d472",
+      "status": "ready"
+    },
+    {
       "id": "ps-png导出脚本-v1-0-0",
       "name": "ps png导出脚本",
       "version": "v1.0.0",
