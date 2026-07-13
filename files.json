@@ -1,6 +1,19 @@
 {
   "files": [
     {
+      "id": "yl5408-发布助手-便携版-2026-07-13-v1-0-0",
+      "name": "YL5408-发布助手-便携版-2026-07-13",
+      "version": "v1.0.0",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "1.6 MB",
+      "updated": "2026-07-13",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/YL5408-.-.-2026-07-13.zip",
+      "checksum": "SHA256: 5d9f629cba573d99cc0ca0347ba6732ef21392bdc93dad2235910be86261f140",
+      "status": "ready"
+    },
+    {
       "id": "frameextractorportable-v1-0-0",
       "name": "FrameExtractorPortable",
       "version": "v1.0.0",
