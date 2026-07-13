@@ -14,19 +14,6 @@
       "status": "ready"
     },
     {
-      "id": "frameextractorportable-v1-0-0",
-      "name": "FrameExtractorPortable",
-      "version": "v1.0.0",
-      "category": "软件",
-      "platform": "Windows",
-      "size": "56.3 MB",
-      "updated": "2026-07-11",
-      "description": "抽帧视频软件",
-      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/FrameExtractorPortable.rar",
-      "checksum": "SHA256: 1fe17b403c57f74bd2a65c2e07451ae4fdc8142c6b3d366b05143205bf12abf6",
-      "status": "ready"
-    },
-    {
       "id": "import-pngs-to-layers-v1-0-0",
       "name": "import_pngs_to_layers",
       "version": "v1.0.0",
