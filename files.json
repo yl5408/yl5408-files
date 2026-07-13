@@ -1,6 +1,19 @@
 {
   "files": [
     {
+      "id": "frameextractorportable-v1-0-0",
+      "name": "FrameExtractorPortable",
+      "version": "v1.0.0",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "56.3 MB",
+      "updated": "2026-07-13",
+      "description": "视频抽帧",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/FrameExtractorPortable.rar",
+      "checksum": "SHA256: 7bc44236e1bd9520cac17589c8efdcfbd90cc6f8a8add70d71541157c008c4ce",
+      "status": "ready"
+    },
+    {
       "id": "yl5408-发布助手-便携版-2026-07-13-v1-0-0",
       "name": "YL5408-发布助手-便携版-2026-07-13",
       "version": "v1.0.0",
