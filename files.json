@@ -1,6 +1,19 @@
 {
   "files": [
     {
+      "id": "frameextractorportable-v1-0-0",
+      "name": "FrameExtractorPortable",
+      "version": "v1.0.0",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "56.3 MB",
+      "updated": "2026-07-16",
+      "description": "视频抽帧",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/FrameExtractorPortable.rar",
+      "checksum": "SHA256: 3103c95eb546e48d4d07172aca08f82ae9ba0e429a5dc0bcea8f117e66369c5d",
+      "status": "ready"
+    },
+    {
       "id": "最强图像超清修复-版本答案-flux-2-klein-v1-0-0",
       "name": "最强图像超清修复-版本答案-Flux.2-klein",
       "version": "v1.0.0",
