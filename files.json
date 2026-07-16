@@ -1,6 +1,19 @@
 {
   "files": [
     {
+      "id": "最强图像超清修复-版本答案-flux-2-klein-v1-0-0",
+      "name": "最强图像超清修复-版本答案-Flux.2-klein",
+      "version": "v1.0.0",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "55.0 KB",
+      "updated": "2026-07-16",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/-.-Flux.2-klein.json",
+      "checksum": "SHA256: 7fa3c58f53aaeb6cfd744933e7062075301fc007d4949181e6de0939c6f0390e",
+      "status": "ready"
+    },
+    {
       "id": "rtx-video-super-resolution秒级视频放大-v1-0-0",
       "name": "RTX Video Super Resolution秒级视频放大",
       "version": "v1.0.0",
