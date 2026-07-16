@@ -1,6 +1,19 @@
 {
   "files": [
     {
+      "id": "rtx-video-super-resolution秒级视频放大-v1-0-0",
+      "name": "RTX Video Super Resolution秒级视频放大",
+      "version": "v1.0.0",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "11.7 KB",
+      "updated": "2026-07-16",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/RTX.Video.Super.Resolution.json",
+      "checksum": "SHA256: c2360da702d54e20804335eca0052d335bd24ec7d07388bfff8d32e7c481ffb1",
+      "status": "ready"
+    },
+    {
       "id": "frameextractorportable-v1-0-0",
       "name": "FrameExtractorPortable",
       "version": "v1.0.0",
