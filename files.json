@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "批量导出组内图片-含调整层-v1-0-0",
+      "name": "批量导出组内图片_含调整层",
+      "version": "v1.0.0",
+      "releaseTag": "批量导出组内图片-含调整层-v1-0-0",
+      "assetName": "_.jsx",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "13.6 KB",
+      "updated": "2026-07-17",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/%E6%89%B9%E9%87%8F%E5%AF%BC%E5%87%BA%E7%BB%84%E5%86%85%E5%9B%BE%E7%89%87-%E5%90%AB%E8%B0%83%E6%95%B4%E5%B1%82-v1-0-0/_.jsx",
+      "checksum": "SHA256: 239722fd60c589c3f7c5112ceae7e50b685a266108a52761fad4ef79862595f0",
+      "status": "ready"
+    },
+    {
       "id": "frameextractorportable-v1-0-0",
       "name": "FrameExtractorPortable",
       "version": "v1.0.0",
