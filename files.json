@@ -53,19 +53,6 @@
       "status": "ready"
     },
     {
-      "id": "import-pngs-to-layers-v1-0-0",
-      "name": "import_pngs_to_layers",
-      "version": "v1.0.0",
-      "category": "软件",
-      "platform": "Windows",
-      "size": "8.0 KB",
-      "updated": "2026-07-09",
-      "description": "png导入脚本",
-      "url": "https://github.com/yl5408/yl5408-files/releases/download/v1.0.0/import_pngs_to_layers.jsx",
-      "checksum": "SHA256: 1feed2d5f4ed61a596e7b712d7e66dd5bddb749b27700747bb588781cb1b84da",
-      "status": "ready"
-    },
-    {
       "id": "ps-png导出脚本-v1-0-0",
       "name": "ps png导出脚本",
       "version": "v1.0.0",
