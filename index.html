@@ -8,38 +8,39 @@
       content="YL5408 下载中心，用于发布软件、工具和公开下载文件。"
     />
     <title>下载中心 - YL5408</title>
-    <link rel="preload" href="./assets/hero-archive.png" as="image" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#downloads">跳到下载目录</a>
+
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="返回首页">
-        <span class="brand-mark" aria-hidden="true">F</span>
+      <a class="brand" href="#top" aria-label="返回下载站首页">
+        <span class="brand-mark" aria-hidden="true">Y</span>
         <span class="brand-text">
-          <strong>YL5408 文件库</strong>
-          <small>files.yl5408.cn</small>
+          <strong>YL5408 下载站</strong>
+          <small>FILES.YL5408.CN</small>
         </span>
       </a>
       <nav class="nav" aria-label="主要导航">
-        <a href="https://yl5408.cn">返回总站</a>
-        <a href="#downloads">文件</a>
-        <a href="#updates">更新</a>
+        <a href="https://yl5408.cn">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 12H5" />
+            <path d="m12 19-7-7 7-7" />
+          </svg>
+          返回总站
+        </a>
+        <a href="#downloads">全部文件</a>
+        <a href="#about">说明</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <img
-          class="hero-image"
-          src="./assets/hero-archive.png"
-          alt="整齐排列的软件包、文件夹和下载模块"
-        />
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="hero-content">
-          <p class="eyebrow">files.yl5408.cn</p>
-          <h1 id="hero-title">YL5408 文件库</h1>
+        <div class="hero-main">
+          <p class="eyebrow">Pink shelf · files.yl5408.cn</p>
+          <h1 id="hero-title">软件、工具，<br />摆好再下载。</h1>
           <p class="hero-copy">
-            这里是下载子站，只负责公开文件、软件包和工具包。总站负责导航，这里负责拿文件。
+            一个安静、清楚的软件下载货架。无需绕路，找到版本、核对信息，然后带走文件。
           </p>
           <div class="hero-actions" aria-label="页面入口">
             <a class="button button-primary" href="#downloads">
@@ -47,32 +48,26 @@
                 <path d="M12 3v12m0 0 4-4m-4 4-4-4" />
                 <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
               </svg>
-              <span>浏览文件</span>
+              浏览文件
             </a>
             <a class="button button-secondary" href="https://yl5408.cn">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M19 12H5" />
-                <path d="m12 19-7-7 7-7" />
-              </svg>
-              <span>返回总站</span>
+              返回总站
             </a>
           </div>
         </div>
-      </section>
 
-      <section class="summary-band" aria-label="站点摘要">
-        <div class="summary-grid">
-          <div>
-            <span class="summary-value" id="total-count">0</span>
-            <span class="summary-label">文件库条目</span>
+        <div class="hero-stats" aria-label="站点摘要">
+          <div class="stat">
+            <strong id="total-count">0</strong>
+            <span>公开文件</span>
           </div>
-          <div>
-            <span class="summary-value" id="latest-version">--</span>
-            <span class="summary-label">最新版本</span>
+          <div class="stat">
+            <strong id="latest-version">--</strong>
+            <span>最新版本</span>
           </div>
-          <div>
-            <span class="summary-value" id="latest-date">--</span>
-            <span class="summary-label">最近日期</span>
+          <div class="stat">
+            <strong id="latest-date">--</strong>
+            <span>最近更新</span>
           </div>
         </div>
       </section>
@@ -80,8 +75,11 @@
       <section class="downloads-section" id="downloads" aria-labelledby="downloads-title">
         <div class="section-inner">
           <div class="section-heading">
-            <p class="eyebrow">Downloads</p>
-            <h2 id="downloads-title">文件下载</h2>
+            <div>
+              <p class="eyebrow">Curated downloads</p>
+              <h2 id="downloads-title">下载目录</h2>
+            </div>
+            <p class="result-count" id="result-count">0 个结果</p>
           </div>
 
           <div class="toolbar" role="search">
@@ -91,21 +89,25 @@
                 <path d="m20 20-3.5-3.5" />
               </svg>
               <span class="sr-only">搜索文件</span>
-              <input id="search-input" type="search" placeholder="搜索名称、系统、说明" />
+              <input id="search-input" type="search" placeholder="搜索名称、版本或说明" />
             </label>
             <div class="category-tabs" id="category-tabs" aria-label="文件分类"></div>
           </div>
 
           <div class="downloads-grid" id="downloads-grid" aria-live="polite"></div>
-          <p class="empty-state" id="empty-state" hidden>没有找到匹配的文件。</p>
+          <p class="empty-state" id="empty-state" role="status" hidden>
+            货架上暂时没有匹配的文件，请换个关键词试试。
+          </p>
         </div>
       </section>
 
       <section class="updates-section" id="updates" aria-labelledby="updates-title">
-        <div class="section-inner two-column">
-          <div class="section-heading">
-            <p class="eyebrow">Log</p>
-            <h2 id="updates-title">最近更新</h2>
+        <div class="section-inner updates-card">
+          <div class="section-heading compact-heading">
+            <div>
+              <p class="eyebrow">Shelf log</p>
+              <h2 id="updates-title">最近上架</h2>
+            </div>
           </div>
           <div class="timeline" id="timeline"></div>
         </div>
@@ -114,15 +116,15 @@
       <section class="about-section" id="about" aria-labelledby="about-title">
         <div class="section-inner about-layout">
           <div>
-            <p class="eyebrow">About</p>
-            <h2 id="about-title">关于这个站点</h2>
+            <p class="eyebrow">About this shelf</p>
+            <h2 id="about-title">只负责把文件放整齐</h2>
           </div>
           <div class="about-copy">
             <p>
-              这里是 YL5408 的下载子站，先作为公开下载目录使用。网站托管在 Cloudflare Pages，文件可以先放在 GitHub Releases。
+              这里是 YL5408 的公开下载子站。文件信息来自发布仓库，下载前可以核对版本、日期、大小和 SHA256 摘要。
             </p>
             <p>
-              后续文件数量增加时，可以把大文件迁到 Cloudflare R2，网站入口和域名保持不变。
+              总站负责导航和内容入口；这个页面专注于软件、脚本与工具包，不混入其他栏目。
             </p>
           </div>
         </div>
@@ -130,8 +132,8 @@
     </main>
 
     <footer class="site-footer">
-      <span>© <span id="year"></span> YL5408 下载中心</span>
-      <a href="mailto:hello@example.com">hello@example.com</a>
+      <span>© <span id="year"></span> YL5408 · 公开下载目录</span>
+      <span>文件来自 GitHub Releases · 提供 SHA256 校验</span>
     </footer>
 
     <script src="./script.js" defer></script>

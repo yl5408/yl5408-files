@@ -14,6 +14,7 @@ const els = {
   total: document.querySelector("#total-count"),
   latestVersion: document.querySelector("#latest-version"),
   latestDate: document.querySelector("#latest-date"),
+  resultCount: document.querySelector("#result-count"),
   timeline: document.querySelector("#timeline"),
   year: document.querySelector("#year")
 };
@@ -80,7 +81,7 @@ function renderTabs() {
   els.tabs.innerHTML = categories
     .map(
       (category) => `
-        <button class="tab-button ${category === state.category ? "is-active" : ""}" type="button" data-category="${escapeHtml(category)}">
+        <button class="tab-button ${category === state.category ? "is-active" : ""}" type="button" data-category="${escapeHtml(category)}" aria-pressed="${category === state.category}">
           ${escapeHtml(category)}
         </button>
       `
@@ -91,6 +92,7 @@ function renderTabs() {
 function renderFiles() {
   const files = getFilteredFiles();
   els.empty.hidden = files.length !== 0;
+  els.resultCount.textContent = `${files.length} 个结果`;
   els.grid.innerHTML = files
     .map((file) => {
       const ready = isReadyUrl(file.url);
@@ -98,13 +100,12 @@ function renderFiles() {
       const statusClass = file.status === "draft" ? "draft" : "";
       const statusText = file.status === "draft" ? "待上传" : "可下载";
       const downloadUrl = ready ? escapeHtml(file.url) : "#";
-      const cardAttrs = ready ? `data-download-url="${downloadUrl}" tabindex="0" role="link" aria-label="下载 ${escapeHtml(file.name)}"` : "";
       const title = ready
         ? `<a class="file-title-link" href="${downloadUrl}" target="_blank" rel="noopener">${escapeHtml(file.name)}</a>`
         : escapeHtml(file.name);
 
       return `
-        <article class="file-card ${ready ? "is-clickable" : ""}" ${cardAttrs}>
+        <article class="file-card ${ready ? "is-clickable" : ""}">
           <div class="file-top">
             <span class="file-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24">
@@ -171,22 +172,6 @@ function renderTimeline() {
 }
 
 function bindEvents() {
-  els.grid.addEventListener("click", (event) => {
-    if (event.target.closest("a, button")) return;
-    const card = event.target.closest("[data-download-url]");
-    if (!card) return;
-    window.open(card.dataset.downloadUrl, "_blank", "noopener");
-  });
-
-  els.grid.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter" && event.key !== " ") return;
-    if (event.target.closest("a, button")) return;
-    const card = event.target.closest("[data-download-url]");
-    if (!card) return;
-    event.preventDefault();
-    window.open(card.dataset.downloadUrl, "_blank", "noopener");
-  });
-
   els.tabs.addEventListener("click", (event) => {
     const button = event.target.closest("[data-category]");
     if (!button) return;
