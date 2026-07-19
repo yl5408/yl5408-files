@@ -91,8 +91,44 @@
               <span class="sr-only">搜索文件</span>
               <input id="search-input" type="search" placeholder="搜索名称、版本或说明" />
             </label>
-            <div class="category-tabs" id="category-tabs" aria-label="文件分类"></div>
+            <div class="toolbar-controls">
+              <label class="sort-field">
+                <span>排序</span>
+                <select id="sort-select" aria-label="文件排序方式">
+                  <option value="updated-desc">最近更新</option>
+                  <option value="updated-asc">最早更新</option>
+                  <option value="name-asc">名称 A–Z</option>
+                  <option value="version-desc">版本从新到旧</option>
+                  <option value="size-desc">文件从大到小</option>
+                  <option value="size-asc">文件从小到大</option>
+                </select>
+              </label>
+              <div class="layout-control">
+                <span>布局</span>
+                <div class="layout-switch" role="group" aria-label="文件布局">
+                  <button class="layout-button is-active" type="button" data-layout="cards" aria-pressed="true" title="卡片布局">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="3" y="3" width="7" height="7" rx="1" />
+                      <rect x="14" y="3" width="7" height="7" rx="1" />
+                      <rect x="3" y="14" width="7" height="7" rx="1" />
+                      <rect x="14" y="14" width="7" height="7" rx="1" />
+                    </svg>
+                    <span class="sr-only">卡片布局</span>
+                  </button>
+                  <button class="layout-button" type="button" data-layout="icons" aria-pressed="false" title="图标布局">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M6 3h9l3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z" />
+                      <path d="M14 3v4h4" />
+                      <path d="M7 13h7M7 17h5" />
+                    </svg>
+                    <span class="sr-only">图标布局</span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <div class="category-tabs" id="category-tabs" aria-label="文件分类"></div>
 
           <div class="downloads-grid" id="downloads-grid" aria-live="polite"></div>
           <p class="empty-state" id="empty-state" role="status" hidden>

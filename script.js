@@ -3,13 +3,20 @@ const fallbackFiles = [];
 const state = {
   files: [],
   category: "全部",
-  query: ""
+  query: "",
+  sort: "updated-desc",
+  layout: "cards"
 };
+
+const SORT_OPTIONS = new Set(["updated-desc", "updated-asc", "name-asc", "version-desc", "size-desc", "size-asc"]);
+const LAYOUT_OPTIONS = new Set(["cards", "icons"]);
 
 const els = {
   grid: document.querySelector("#downloads-grid"),
   tabs: document.querySelector("#category-tabs"),
   search: document.querySelector("#search-input"),
+  sort: document.querySelector("#sort-select"),
+  layoutButtons: [...document.querySelectorAll("[data-layout]")],
   empty: document.querySelector("#empty-state"),
   total: document.querySelector("#total-count"),
   latestVersion: document.querySelector("#latest-version"),
@@ -31,6 +38,53 @@ function escapeHtml(value) {
 function formatDate(value) {
   if (!value) return "--";
   return value;
+}
+
+function readPreference(key, allowed, fallback) {
+  try {
+    const value = localStorage.getItem(key);
+    return allowed.has(value) ? value : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function savePreference(key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch {
+    // 浏览器禁用本地存储时仍可正常使用当前页面。
+  }
+}
+
+function parseFileSize(value) {
+  const match = String(value || "").replaceAll(",", "").match(/([\d.]+)\s*(B|KB|MB|GB|TB)/i);
+  if (!match) return -1;
+  const units = { B: 1, KB: 1024, MB: 1024 ** 2, GB: 1024 ** 3, TB: 1024 ** 4 };
+  return Number(match[1]) * units[match[2].toUpperCase()];
+}
+
+function fileExtension(file) {
+  const source = String(file.assetName || file.url || "").split(/[?#]/)[0];
+  const filename = source.split("/").pop() || "";
+  const extension = filename.includes(".") ? filename.split(".").pop() : "FILE";
+  return String(extension || "FILE").slice(0, 5).toUpperCase();
+}
+
+function sortFiles(files) {
+  const collator = new Intl.Collator("zh-CN", { numeric: true, sensitivity: "base" });
+  const compare = {
+    "updated-desc": (a, b) => String(b.updated || "").localeCompare(String(a.updated || "")),
+    "updated-asc": (a, b) => String(a.updated || "").localeCompare(String(b.updated || "")),
+    "name-asc": (a, b) => collator.compare(String(a.name || ""), String(b.name || "")),
+    "version-desc": (a, b) => collator.compare(String(b.version || ""), String(a.version || "")),
+    "size-desc": (a, b) => parseFileSize(b.size) - parseFileSize(a.size),
+    "size-asc": (a, b) => parseFileSize(a.size) - parseFileSize(b.size)
+  }[state.sort];
+  return files
+    .map((file, index) => ({ file, index }))
+    .sort((a, b) => compare(a.file, b.file) || a.index - b.index)
+    .map(({ file }) => file);
 }
 
 function isReadyUrl(url) {
@@ -59,7 +113,7 @@ async function loadFiles() {
 
 function getFilteredFiles() {
   const query = state.query.trim().toLowerCase();
-  return state.files.filter((file) => {
+  const filtered = state.files.filter((file) => {
     const inCategory = state.category === "全部" || file.category === state.category;
     const haystack = [
       file.name,
@@ -74,6 +128,7 @@ function getFilteredFiles() {
       .toLowerCase();
     return inCategory && (!query || haystack.includes(query));
   });
+  return sortFiles(filtered);
 }
 
 function renderTabs() {
@@ -91,6 +146,7 @@ function renderTabs() {
 
 function renderFiles() {
   const files = getFilteredFiles();
+  els.grid.dataset.layout = state.layout;
   els.empty.hidden = files.length !== 0;
   els.resultCount.textContent = `${files.length} 个结果`;
   els.grid.innerHTML = files
@@ -114,6 +170,7 @@ function renderFiles() {
                 <path d="M9 15h6" />
                 <path d="M9 18h4" />
               </svg>
+              <span class="file-extension">${escapeHtml(fileExtension(file))}</span>
             </span>
             <span class="status-pill ${statusClass}">${statusText}</span>
           </div>
@@ -141,6 +198,15 @@ function renderFiles() {
       `;
     })
     .join("");
+}
+
+function renderLayout() {
+  els.grid.dataset.layout = state.layout;
+  els.layoutButtons.forEach((button) => {
+    const active = button.dataset.layout === state.layout;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
 }
 
 function renderSummary() {
@@ -184,15 +250,34 @@ function bindEvents() {
     state.query = event.target.value;
     renderFiles();
   });
+
+  els.sort.addEventListener("change", (event) => {
+    state.sort = SORT_OPTIONS.has(event.target.value) ? event.target.value : "updated-desc";
+    savePreference("yl5408-files-sort", state.sort);
+    renderFiles();
+  });
+
+  els.layoutButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!LAYOUT_OPTIONS.has(button.dataset.layout)) return;
+      state.layout = button.dataset.layout;
+      savePreference("yl5408-files-layout", state.layout);
+      renderLayout();
+    });
+  });
 }
 
 async function init() {
   els.year.textContent = new Date().getFullYear();
+  state.sort = readPreference("yl5408-files-sort", SORT_OPTIONS, "updated-desc");
+  state.layout = readPreference("yl5408-files-layout", LAYOUT_OPTIONS, "cards");
+  els.sort.value = state.sort;
   state.files = await loadFiles();
   renderSummary();
   renderTimeline();
   renderTabs();
   renderFiles();
+  renderLayout();
   bindEvents();
 }
 

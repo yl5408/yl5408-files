@@ -322,7 +322,73 @@ svg {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+}
+
+.toolbar-controls,
+.sort-field,
+.layout-control,
+.layout-switch {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-controls {
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.sort-field,
+.layout-control {
+  gap: 9px;
+  color: #6d4a56;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.sort-field select {
+  min-height: 50px;
+  padding: 0 38px 0 14px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  box-shadow: 0 8px 22px rgba(105, 42, 68, 0.06);
+  cursor: pointer;
+  font: inherit;
+}
+
+.layout-switch {
+  gap: 4px;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  box-shadow: 0 8px 22px rgba(105, 42, 68, 0.06);
+}
+
+.layout-button {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  padding: 0;
+  color: #76545f;
+  background: transparent;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.layout-button:hover,
+.layout-button.is-active {
+  color: #ffffff;
+  background: var(--rose);
+}
+
+.layout-button svg {
+  width: 19px;
+  height: 19px;
 }
 
 .search-field {
@@ -361,6 +427,7 @@ svg {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 8px;
+  margin-bottom: 24px;
 }
 
 .tab-button {
@@ -421,10 +488,12 @@ svg {
 }
 
 .file-icon {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   width: 48px;
   height: 48px;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
   color: var(--rose-dark);
   background: var(--pink-soft);
@@ -432,8 +501,16 @@ svg {
 }
 
 .file-icon svg {
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
+}
+
+.file-extension {
+  margin-top: 2px;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  line-height: 1;
 }
 
 .status-pill {
@@ -538,6 +615,61 @@ svg {
   color: #6d5860;
   background: #eadfe2;
   pointer-events: none;
+}
+
+.downloads-grid[data-layout="icons"] {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.downloads-grid[data-layout="icons"] .file-card {
+  min-height: 248px;
+  gap: 14px;
+  padding: 18px;
+  text-align: center;
+}
+
+.downloads-grid[data-layout="icons"] .file-top {
+  flex-direction: column;
+  align-items: center;
+}
+
+.downloads-grid[data-layout="icons"] .file-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+}
+
+.downloads-grid[data-layout="icons"] .file-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.downloads-grid[data-layout="icons"] .file-extension {
+  font-size: 9px;
+}
+
+.downloads-grid[data-layout="icons"] .file-card h3 {
+  font-size: 17px;
+}
+
+.downloads-grid[data-layout="icons"] .file-description,
+.downloads-grid[data-layout="icons"] .hash {
+  display: none;
+}
+
+.downloads-grid[data-layout="icons"] .meta-row {
+  justify-content: center;
+  margin-top: 13px;
+}
+
+.downloads-grid[data-layout="icons"] .file-actions {
+  grid-template-columns: 1fr;
+  padding-top: 13px;
+}
+
+.downloads-grid[data-layout="icons"] .download-link {
+  width: 100%;
+  min-width: 0;
 }
 
 .empty-state {
@@ -645,10 +777,12 @@ svg {
 .nav a:focus-visible,
 .button:focus-visible,
 .tab-button:focus-visible,
+.layout-button:focus-visible,
 .download-link:focus-visible,
 .file-title-link:focus-visible,
 .file-card.is-clickable:focus-visible,
-.search-field:focus-within {
+.search-field:focus-within,
+.sort-field:focus-within {
   outline: 3px solid var(--rose-deep);
   outline-offset: 3px;
 }
@@ -720,6 +854,10 @@ svg {
 
   .downloads-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .downloads-grid[data-layout="icons"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .updates-card,
@@ -808,6 +946,18 @@ svg {
     display: flex;
   }
 
+  .toolbar-controls {
+    justify-content: space-between;
+  }
+
+  .sort-field {
+    flex: 1;
+  }
+
+  .sort-field select {
+    width: 100%;
+  }
+
   .search-field {
     width: 100%;
   }
@@ -818,6 +968,10 @@ svg {
 
   .downloads-grid {
     grid-template-columns: 1fr;
+  }
+
+  .downloads-grid[data-layout="icons"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .file-card {
@@ -850,6 +1004,19 @@ svg {
 
   .download-link {
     width: 100%;
+  }
+
+  .toolbar-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .layout-control {
+    justify-content: space-between;
+  }
+
+  .downloads-grid[data-layout="icons"] {
+    grid-template-columns: 1fr;
   }
 }
 
