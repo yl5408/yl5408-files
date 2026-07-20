@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "透明图集校色-ui版-批量文件夹-v1-0-0",
+      "name": "透明图集校色_UI版_批量文件夹",
+      "version": "v1.0.0",
+      "releaseTag": "透明图集校色-ui版-批量文件夹-v1-0-0",
+      "assetName": "_UI._.exe",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "29.5 MB",
+      "updated": "2026-07-20",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/%E9%80%8F%E6%98%8E%E5%9B%BE%E9%9B%86%E6%A0%A1%E8%89%B2-ui%E7%89%88-%E6%89%B9%E9%87%8F%E6%96%87%E4%BB%B6%E5%A4%B9-v1-0-0/_UI._.exe",
+      "checksum": "SHA256: db3fbb63e88f1e14e06b8d1395661eddcee3ef1b39b103ded5fe00fa477c56cf",
+      "status": "ready"
+    },
+    {
       "id": "eagle快捷键备份-v1-0-0",
       "name": "eagle快捷键备份",
       "version": "v1.0.0",
