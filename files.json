@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "eagle快捷键备份-v1-0-0",
+      "name": "eagle快捷键备份",
+      "version": "v1.0.0",
+      "releaseTag": "eagle快捷键备份-v1-0-0",
+      "assetName": "default.eagleplugin",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "15.1 KB",
+      "updated": "2026-07-20",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/eagle%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%87%E4%BB%BD-v1-0-0/default.eagleplugin",
+      "checksum": "SHA256: 8c4b15e5c739646305bf72ef937aded004f3a75665d43f07a99083c93c84a2e9",
+      "status": "ready"
+    },
+    {
       "id": "import-pngs-to-layers-v1-0-0",
       "name": "import_pngs_to_layers",
       "version": "v1.0.0",
