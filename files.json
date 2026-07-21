@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "透明图集色彩复刻-v2-v1-0-0",
+      "name": "透明图集色彩复刻_v2",
+      "version": "v1.0.0",
+      "releaseTag": "透明图集色彩复刻-v2-v1-0-0",
+      "assetName": "_v2.exe",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "28.3 MB",
+      "updated": "2026-07-21",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/%E9%80%8F%E6%98%8E%E5%9B%BE%E9%9B%86%E8%89%B2%E5%BD%A9%E5%A4%8D%E5%88%BB-v2-v1-0-0/_v2.exe",
+      "checksum": "SHA256: 5789e5934a4c9a8aa8444e47e35c991bdcd80a08654fee7233117c8d1529fa87",
+      "status": "ready"
+    },
+    {
       "id": "透明图集校色-ui版-批量文件夹-v1-0-0",
       "name": "透明图集校色_UI版_批量文件夹",
       "version": "v1.0.0",
