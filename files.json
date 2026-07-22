@@ -1,21 +1,6 @@
 {
   "files": [
     {
-      "id": "ai-存储迁移助手-v1-0-0",
-      "name": "AI 存储迁移助手",
-      "version": "v1.0.0",
-      "releaseTag": "ai-存储迁移助手-v1-0-0",
-      "assetName": "AI.eagleplugin",
-      "category": "软件",
-      "platform": "Windows",
-      "size": "13.5 KB",
-      "updated": "2026-07-21",
-      "description": "暂无说明。",
-      "url": "https://github.com/yl5408/yl5408-files/releases/download/ai-%E5%AD%98%E5%82%A8%E8%BF%81%E7%A7%BB%E5%8A%A9%E6%89%8B-v1-0-0/AI.eagleplugin",
-      "checksum": "SHA256: 0137b8f089cb5e1af2d09b22f38553079f3499f244b656665e23eaa8693c5099",
-      "status": "ready"
-    },
-    {
       "id": "透明图集色彩复刻-v2-v1-0-0",
       "name": "透明图集色彩复刻_v2",
       "version": "v1.0.0",
