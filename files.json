@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "eagle-ai-storage-mover-v1-2-0-source-v1-0-0",
+      "name": "Eagle-AI-Storage-Mover-v1.2.0-source",
+      "version": "v1.0.0",
+      "releaseTag": "eagle-ai-storage-mover-v1-2-0-source-v1-0-0",
+      "assetName": "Eagle-AI-Storage-Mover-v1.2.0-source.zip",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "16.3 KB",
+      "updated": "2026-07-22",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/eagle-ai-storage-mover-v1-2-0-source-v1-0-0/Eagle-AI-Storage-Mover-v1.2.0-source.zip",
+      "checksum": "SHA256: c3d2ddb0572b6b7e1a7a2a52cc82b2162b6d0d5477154bed5aee5ba929f0ab7e",
+      "status": "ready"
+    },
+    {
       "id": "透明图集色彩复刻-v2-v1-0-0",
       "name": "透明图集色彩复刻_v2",
       "version": "v1.0.0",
