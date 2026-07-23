@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "eagle-ai-one-click-mover-v2-0-0-v1-0-0",
+      "name": "Eagle-AI-One-Click-Mover-v2.0.0",
+      "version": "v1.0.0",
+      "releaseTag": "eagle-ai-one-click-mover-v2-0-0-v1-0-0",
+      "assetName": "Eagle-AI-One-Click-Mover-v2.0.0.rar",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "16.4 KB",
+      "updated": "2026-07-23",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/eagle-ai-one-click-mover-v2-0-0-v1-0-0/Eagle-AI-One-Click-Mover-v2.0.0.rar",
+      "checksum": "SHA256: b49059b26da3bc3f23b21bb5942b483b2f827357a8fea43c3ad606e08b2ae2a5",
+      "status": "ready"
+    },
+    {
       "id": "透明图集色彩复刻-v2-v1-0-0",
       "name": "透明图集色彩复刻_v2",
       "version": "v1.0.0",
