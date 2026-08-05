@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "minimax-h3-fl2va开源版-首尾帧参考生视频-v1-0-0",
+      "name": "MiniMax+H3+FL2VA开源版-首尾帧参考生视频",
+      "version": "v1.0.0",
+      "releaseTag": "minimax-h3-fl2va开源版-首尾帧参考生视频-v1-0-0",
+      "assetName": "MiniMax+H3+FL2VA.-._api.json",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "8.7 KB",
+      "updated": "2026-08-05",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/minimax-h3-fl2va%E5%BC%80%E6%BA%90%E7%89%88-%E9%A6%96%E5%B0%BE%E5%B8%A7%E5%8F%82%E8%80%83%E7%94%9F%E8%A7%86%E9%A2%91-v1-0-0/MiniMax%2BH3%2BFL2VA.-._api.json",
+      "checksum": "SHA256: fa89201845664be920137f06cc755772796c91b762ac9f381966d4477d386b0d",
+      "status": "ready"
+    },
+    {
       "id": "eagle-ai-one-click-mover-v2-0-0-v1-0-0",
       "name": "Eagle-AI-One-Click-Mover-v2.0.0",
       "version": "v1.0.0",
