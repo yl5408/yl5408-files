@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "photoshop-autoversion-handoff-v1-0-0",
+      "name": "photoshop_autoversion_handoff",
+      "version": "v1.0.0",
+      "releaseTag": "photoshop-autoversion-handoff-v1-0-0",
+      "assetName": "photoshop_autoversion_handoff.md",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "12.9 KB",
+      "updated": "2026-08-28",
+      "description": "jiaojie",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/photoshop-autoversion-handoff-v1-0-0/photoshop_autoversion_handoff.md",
+      "checksum": "SHA256: ec28a58f1816271df50fa2ba65658d3ef9128637560b6de9b1e9b6d8403b89a5",
+      "status": "ready"
+    },
+    {
       "id": "minimax-h3-fl2va开源版-首尾帧参考生视频-v1-0-0",
       "name": "MiniMax+H3+FL2VA开源版-首尾帧参考生视频",
       "version": "v1.0.0",
