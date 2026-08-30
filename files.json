@@ -1,21 +1,6 @@
 {
   "files": [
     {
-      "id": "ps自动保存插件-v1-0-0",
-      "name": "ps自动保存插件",
-      "version": "v1.0.0",
-      "releaseTag": "ps自动保存插件-v1-0-0",
-      "assetName": "AutoVersion-Backup-CEP-0.1.7-rc1-portable.zip",
-      "category": "软件",
-      "platform": "Windows",
-      "size": "21.8 KB",
-      "updated": "2026-08-30",
-      "description": "暂无说明。",
-      "url": "https://github.com/yl5408/yl5408-files/releases/download/ps%E8%87%AA%E5%8A%A8%E4%BF%9D%E5%AD%98%E6%8F%92%E4%BB%B6-v1-0-0/AutoVersion-Backup-CEP-0.1.7-rc1-portable.zip",
-      "checksum": "SHA256: a10ba2ddc329ae5f8312b2d530ec4c79eca0cb53948b71e34c0be1d646c49491",
-      "status": "ready"
-    },
-    {
       "id": "minimax-h3-fl2va开源版-首尾帧参考生视频-v1-0-0",
       "name": "MiniMax+H3+FL2VA开源版-首尾帧参考生视频",
       "version": "v1.0.0",
