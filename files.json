@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "autoversion-backup-cep-0-1-8-rc2-portable-v1-0-0",
+      "name": "AutoVersion-Backup-CEP-0.1.8-rc2-portable",
+      "version": "v1.0.0",
+      "releaseTag": "autoversion-backup-cep-0-1-8-rc2-portable-v1-0-0",
+      "assetName": "AutoVersion-Backup-CEP-0.1.8-rc2-portable.zip",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "22.6 KB",
+      "updated": "2026-08-30",
+      "description": "PS 自动保存插件",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/autoversion-backup-cep-0-1-8-rc2-portable-v1-0-0/AutoVersion-Backup-CEP-0.1.8-rc2-portable.zip",
+      "checksum": "SHA256: 7c562da4bc83cc8513a6985744150d7964db083d788f4c0e06e77a2edec77ad5",
+      "status": "ready"
+    },
+    {
       "id": "minimax-h3-fl2va开源版-首尾帧参考生视频-v1-0-0",
       "name": "MiniMax+H3+FL2VA开源版-首尾帧参考生视频",
       "version": "v1.0.0",
