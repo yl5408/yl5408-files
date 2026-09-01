@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "ps自动保存插件-v1-0-0",
+      "name": "ps自动保存插件",
+      "version": "v1.0.0",
+      "releaseTag": "ps自动保存插件-v1-0-0",
+      "assetName": "AutoVersion-Backup-CEP-0.1.9-rc3-portable.zip",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "22.7 KB",
+      "updated": "2026-09-01",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/ps%E8%87%AA%E5%8A%A8%E4%BF%9D%E5%AD%98%E6%8F%92%E4%BB%B6-v1-0-0/AutoVersion-Backup-CEP-0.1.9-rc3-portable.zip",
+      "checksum": "SHA256: 01b7de07a5309234f8a29064150080403faed14208cf6698cbe54d17029da188",
+      "status": "ready"
+    },
+    {
       "id": "autoversion-backup-cep-0-1-8-rc2-portable-v1-0-0",
       "name": "AutoVersion-Backup-CEP-0.1.8-rc2-portable",
       "version": "v1.0.0",
