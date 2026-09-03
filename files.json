@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "psai插件-v1-0-0",
+      "name": "psai插件",
+      "version": "v1.0.0",
+      "releaseTag": "psai插件-v1-0-0",
+      "assetName": "psai.zip",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "196.4 KB",
+      "updated": "2026-09-03",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/psai%E6%8F%92%E4%BB%B6-v1-0-0/psai.zip",
+      "checksum": "SHA256: 05f780dc8180e973a700fbe4f25e888138b61d180d14effed9eb86121206ff5a",
+      "status": "ready"
+    },
+    {
       "id": "ps-ai-bridge-secure-local-v1-4-5-active-layer-jpeg-fix-directinstall-v1-0-0",
       "name": "PS-AI-Bridge-Secure-Local-v1.4.5-Active-Layer-JPEG-Fix-DirectInstall",
       "version": "v1.0.0",
