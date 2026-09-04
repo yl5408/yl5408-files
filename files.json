@@ -1,6 +1,21 @@
 {
   "files": [
     {
+      "id": "cinematic-trailer-director-v1-0-0",
+      "name": "cinematic-trailer-director",
+      "version": "v1.0.0",
+      "releaseTag": "cinematic-trailer-director-v1-0-0",
+      "assetName": "cinematic-trailer-director.zip",
+      "category": "软件",
+      "platform": "Windows",
+      "size": "28.6 KB",
+      "updated": "2026-09-04",
+      "description": "暂无说明。",
+      "url": "https://github.com/yl5408/yl5408-files/releases/download/cinematic-trailer-director-v1-0-0/cinematic-trailer-director.zip",
+      "checksum": "SHA256: b0f313a68f7cff95515623c749b92aa040ee2ab73dd0417ff88448b7107fc74f",
+      "status": "ready"
+    },
+    {
       "id": "psai插件-v1-0-0",
       "name": "psai插件",
       "version": "v1.0.0",
