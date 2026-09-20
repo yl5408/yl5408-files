@@ -1,21 +1,6 @@
 {
   "files": [
     {
-      "id": "谷歌插件瀑布流-v1-0-0",
-      "name": "谷歌插件瀑布流",
-      "version": "v1.0.0",
-      "releaseTag": "谷歌插件瀑布流-v1-0-0",
-      "assetName": "Bookmark-Wall-v0.1.0.zip",
-      "category": "软件",
-      "platform": "Windows",
-      "size": "12.5 KB",
-      "updated": "2026-09-19",
-      "description": "暂无说明。",
-      "url": "https://github.com/yl5408/yl5408-files/releases/download/%E8%B0%B7%E6%AD%8C%E6%8F%92%E4%BB%B6%E7%80%91%E5%B8%83%E6%B5%81-v1-0-0/Bookmark-Wall-v0.1.0.zip",
-      "checksum": "SHA256: 7b3af78164852fb4b1df73b69c5edfcadcf04a20a6b77ea493782f9f0fe622af",
-      "status": "ready"
-    },
-    {
       "id": "cinematic-trailer-director-v1-0-0",
       "name": "cinematic-trailer-director",
       "version": "v1.0.0",
